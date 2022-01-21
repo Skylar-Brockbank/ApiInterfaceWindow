@@ -25,10 +25,11 @@ document.addEventListener('keyup',(e)=>{delete keysDown[e.keyCode];}, false);
   //Canvas Presets
 var c = document.getElementById("playerCanvas");
 var brush = c.getContext("2d");
+c.parentNode.style.height = window.innerHeight/2+"px";
+c.parentNode.style.width= c.parentNode.style.height;
+c.parentNode.style.border="solid black 1em";
 c.width = c.parentNode.offsetWidth;
 c.height = c.parentNode.offsetHeight;
-c.parentNode.height = window.innerHeight/2;
-c.parentNode.width= c.parentNode.height;
 var q = c.height/7;
 
 //big loop start
